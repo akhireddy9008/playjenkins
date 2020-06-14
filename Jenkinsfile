@@ -1,7 +1,7 @@
 pipeline {
 environment {
 registry = "akhilreddy0428/ci-cd-pipeline"
-registryCredential = 'DockerCreds'
+registryCredential = `DockerCreds`
 dockerImage = ''
 }
 agent any
