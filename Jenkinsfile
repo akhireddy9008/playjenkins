@@ -1,9 +1,9 @@
 pipeline {
 
-#  environment {
- #   registry = "192.168.1.81:5000/justme/myweb"
- #   dockerImage = ""
- # }
+//#  environment {
+ //#   registry = "192.168.1.81:5000/justme/myweb"
+ //#   dockerImage = ""
+ //# }
 environment {
 registry = "akhilreddy0428"
 registryCredential = 'DockerCreds'
@@ -36,15 +36,15 @@ dockerImage.push()
 }
 }
 }
-#    stage('Deploy App') {
- #     steps {
-  #      script {
-   #       kubernetesDeploy(configs: "myweb.yaml", kubeconfigId: "azure-kube-config")
-    #    }
-     # }
-    #}
+//#    stage('Deploy App') {
+// #     steps {
+ // #      script {
+ //  #       kubernetesDeploy(configs: "myweb.yaml", kubeconfigId: "azure-kube-config")
+ //   #    }
+ //    # }
+//    #}
 
   
-#}
+//#}
 
-#}
+//#}
