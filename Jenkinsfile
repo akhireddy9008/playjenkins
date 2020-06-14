@@ -33,7 +33,7 @@ withDockerRegistry(credentialsId: 'DockerCreds') {
         }
       }
     }
-    stage('Deploy to kubernetes){
+    stage('Deploy to kubernetes'){
         steps{
           script{
                       kubernetesDeploy(configs: "myweb.yaml", kubeconfigId: "Azure-k8s-kubeconfig")
