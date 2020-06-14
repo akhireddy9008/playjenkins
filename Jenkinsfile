@@ -9,7 +9,7 @@ stages {
   stage('Cloning our Git') {
     steps {
       script{
-        git 'https://github.com/akhireddy9008/pipeline-demo-2.git'
+        git 'https://github.com/akhireddy9008/playjenkins.git'
         }
       }
     }
