@@ -8,7 +8,7 @@ agent any
 stages {
 stage('Cloning our Git') {
 steps {
-git 'hps://github.com/akhireddy9008/pipeline-demo-2.git'
+git 'https://github.com/akhireddy9008/pipeline-demo-2.git'
 }
 }
 stage('Building our image') {
