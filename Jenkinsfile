@@ -33,14 +33,14 @@ stages {
         }
       }
     }
-}
-}
-    //stage('Deploy to kubernetes'){
-     //   steps{
-     //     script{
-      //                kubernetesDeploy(configs: "myweb.yaml", kubeconfigId: "Azure-k8s-kubeconfig")
-      //    }
-     //   }
-      //}
-  // }
 //}
+//}
+    stage('Deploy to kubernetes'){
+        steps{
+          script{
+                      kubernetesDeploy(configs: "myweb.yaml", kubeconfigId: "Azure-k8s-kubeconfig")
+          }
+        }
+      }
+}
+}
