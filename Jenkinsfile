@@ -27,12 +27,14 @@ stages {
 //withDockerRegistry(credentialsId: 'DockerCreds') {
     // some block
          
- docker.withRegistry( '', registryCredential )
+         docker.withRegistry( '', registryCredential ){
            dockerImage.push()
           }
         }
       }
     }
+}
+}
     //stage('Deploy to kubernetes'){
      //   steps{
      //     script{
