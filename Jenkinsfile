@@ -1,7 +1,7 @@
 pipeline {
   environment {
     registry = "akhilreddy0428/ci-cd-pipeline"
-    //registryCredential = `DockerCreds`
+    registryCredential = `DockerCreds`
     dockerImage = ''
   }  
 agent any
@@ -24,11 +24,11 @@ stages {
      steps{
        script {
    	  // This step should not normally be used in your script. Consult the inline help for details.
-withDockerRegistry(credentialsId: 'DockerCreds') {
+//withDockerRegistry(credentialsId: 'DockerCreds') {
     // some block
          
- //docker.withRegistry( '', registryCredential )
-            dockerImage.push()
+ docker.withRegistry( '', registryCredential )
+           dockerImage.push()
           }
         }
       }
