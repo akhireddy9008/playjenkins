@@ -1,9 +1,9 @@
 pipeline {
-environment {
-registry = "akhilreddy0428/ci-cd-pipeline"
-registryCredential = `DockerCreds`
-dockerImage = ''
-}
+  environment {
+    registry = "akhilreddy0428/ci-cd-pipeline"
+    registryCredential = `DockerCreds`
+    dockerImage = ''
+  }  
 agent any
 stages {
   stage('Cloning our Git') {
@@ -23,7 +23,11 @@ stages {
    stage('Deploy our image') {
      steps{
        script {
-          docker.withRegistry( '', registryCredential ) {
+   	  // This step should not normally be used in your script. Consult the inline help for details.
+withDockerRegistry(credentialsId: 'DockerCreds') {
+    // some block
+         
+ //docker.withRegistry( '', registryCredential )
             dockerImage.push()
           }
         }
